@@ -31,7 +31,11 @@ class MainWindow(QMainWindow):
         self.b1.clicked.connect(self.MountClicked)
 
     def MountClicked(self):
-        self.label1.setText("mounting...")
+        self.label1.setText("mounting... ok i guess the mount finished")
+        self.update()
+
+    def update(self):
+        self.label1.adjustSize()
 
 def window():
     global app
@@ -39,6 +43,5 @@ def window():
     win = MainWindow()
     win.show()
     sys.exit(app.exec_())
-    
     
 window()
