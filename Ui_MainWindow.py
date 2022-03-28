@@ -9,8 +9,13 @@
 
 
 from ast import Lambda
+import datetime
+import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 import webbrowser
+import Scripts.RunGame as RG
+import Scripts.BasicLogger as Logger
+import Scripts.GlobalVariables as GVars
 
 
 class Ui_MainWindow(object):
@@ -56,7 +61,9 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         
+        # Binding click events
         self.actionGuide.triggered.connect(lambda: self.OpenGuide())
+        self.Button_MountMod.clicked.connect(lambda: self.MountMod())
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -73,10 +80,27 @@ class Ui_MainWindow(object):
         self.actionSettings.setStatusTip(_translate("MainWindow", "opens the settings menu"))
         self.actionAbout.setText(_translate("MainWindow", "About"))
 
+    
     def OpenGuide(self):
         guideURL = "https://steamcommunity.com/sharedfiles/filedetails/?id=2458260280"
         webbrowser.open(guideURL)
+    
+    def MountMod(self):
+        RG.Mount()
 
+# populate the global variables
+GVars.init()
+x = GVars.AppStartDate
+# logging
+Logger.Log("______________________LAUNCH LOG " + x + "______________________")
+
+if (GVars.iow):
+    Logger.Log("")
+    Logger.Log("Windows OS detected!")
+else:
+    Logger.Log("")
+    Logger.Log("Linux OS detected!")
+    
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
