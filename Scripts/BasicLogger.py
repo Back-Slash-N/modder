@@ -11,4 +11,7 @@ def Log(message):
         log.write(GVars.AppStartDate)
         # close the log
         log.close()
-    print("(P2:MM): " + message)
+    if len(message) > 0:
+        print("(P2:MM): " + message)
+    else:
+        print("")

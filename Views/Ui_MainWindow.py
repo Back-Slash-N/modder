@@ -88,24 +88,13 @@ class Ui_MainWindow(object):
     def MountMod(self):
         RG.Mount()
 
-# populate the global variables
-GVars.init()
-x = GVars.AppStartDate
-# logging
-Logger.Log("______________________LAUNCH LOG " + x + "______________________")
 
-if (GVars.iow):
-    Logger.Log("")
-    Logger.Log("Windows OS detected!")
-else:
-    Logger.Log("")
-    Logger.Log("Linux OS detected!")
-    
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+#     
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     MainWindow = QtWidgets.QMainWindow()
+#     ui = Ui_MainWindow()
+#     ui.setupUi(MainWindow)
+#     MainWindow.show()
+#     sys.exit(app.exec_())
