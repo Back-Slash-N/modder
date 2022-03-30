@@ -1,5 +1,6 @@
 from cmath import log
 import os
+import BasicLogger as Logger
 
 DefaultConfigFile = [
     "# █▀▀ █▀█ █▄░█ █▀▀ █ █▀▀",
@@ -67,7 +68,7 @@ def ProcessConfig():
                 processedconfig.append(line)
                 Log("Line:" + line)
 
-    Log("Config Data End====================")
-    Log("")
-    Log("Config Imported!")
+    Logger.Log("Config Data End====================")
+    Logger.Log("")
+    Logger.Log("Config Imported!")
     return processedconfig
