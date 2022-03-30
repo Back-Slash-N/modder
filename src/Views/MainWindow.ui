@@ -11,37 +11,29 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Portal 2: Multiplayer Mod</string>
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../Resources/Images/icon.png</normaloff>../../Resources/Images/icon.png</iconset>
+    <normaloff>../../Resources/Images/MainWindowIcon.png</normaloff>../../Resources/Images/MainWindowIcon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 63 14pt &quot;Quicksand SemiBold&quot;;
+color: rgb(104, 150, 137);
+background-color: rgb(11, 60, 73);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="Button_MountMod">
     <property name="geometry">
      <rect>
-      <x>9</x>
-      <y>453</y>
+      <x>50</x>
+      <y>360</y>
       <width>75</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
      <string>Mount mod</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Label_ModStatus">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>190</y>
-      <width>61</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>not mounted</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -66,17 +58,91 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="Label_PublicIP">
+   <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>140</y>
-      <width>44</width>
-      <height>16</height>
+      <width>81</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string>Public IP:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_CopyIP">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>130</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Resources/Images/copy-icon2.svg</normaloff>../../Resources/Images/copy-icon2.svg</iconset>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_PublicIP">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>130</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; text-decoration: underline;&quot;&gt;123.456.789.123&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#da2c38;&quot;&gt;Developer Mode:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>190</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
@@ -86,7 +152,7 @@
      <x>0</x>
      <y>0</y>
      <width>795</width>
-     <height>21</height>
+     <height>34</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuSettings_2">
