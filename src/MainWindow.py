@@ -1,10 +1,10 @@
 import webbrowser
-from PyQt5 import QtWidgets as qtw
-from PyQt5 import QtCore as qtc
-from PyQt5 import Qt
+from PySide6 import QtWidgets as qtw
+from PySide6 import QtCore as qtc
 import sys
 
-from Views.Ui_MainWindow import Ui_MainWindow
+
+from Views.UI_MainWindow import Ui_MainWindow
 import Scripts.GlobalVariables as GVars
 import Scripts.BasicLogger as Logger
 import Scripts.RunGame as RG

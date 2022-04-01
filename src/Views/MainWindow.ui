@@ -204,8 +204,5 @@ background-color: rgb(11, 60, 73);</string>
    </property>
   </action>
  </widget>
- <resources>
-  <include location="../../Resources/test.qrc"/>
- </resources>
  <connections/>
 </ui>
