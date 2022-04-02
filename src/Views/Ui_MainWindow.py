@@ -16,19 +16,19 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QMenu,
-    QMenuBar, QPushButton, QRadioButton, QSizePolicy,
+from PySide6.QtWidgets import (QApplication, QCheckBox, QLabel, QMainWindow,
+    QMenu, QMenuBar, QPushButton, QSizePolicy,
     QStatusBar, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(795, 526)
+        MainWindow.resize(795, 524)
         icon = QIcon()
-        icon.addFile(u"../../Resources/Images/MainWindowIcon.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile("Resources.Images.MainWindowIcon.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet(u"font: 63 14pt \"Quicksand SemiBold\";\n"
+        MainWindow.setStyleSheet(u"font: 63 20pt \"Quicksand SemiBold\";\n"
 "color: rgb(104, 150, 137);\n"
 "background-color: rgb(11, 60, 73);")
         self.actionGuide = QAction(MainWindow)
@@ -43,40 +43,66 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.Button_MountMod = QPushButton(self.centralwidget)
         self.Button_MountMod.setObjectName(u"Button_MountMod")
-        self.Button_MountMod.setGeometry(QRect(50, 360, 75, 23))
+        self.Button_MountMod.setGeometry(QRect(10, 390, 141, 51))
+        self.Button_MountMod.setStyleSheet(u"color: rgb(19, 231, 69);\n"
+"font: 600 30pt \"Quicksand\";")
+        self.Button_MountMod.setFlat(True)
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
         self.label.setEnabled(True)
-        self.label.setGeometry(QRect(0, 0, 100, 100))
-        self.label.setPixmap(QPixmap(u"../../Resources/Images/logo.svg"))
+        self.label.setGeometry(QRect(0, 20, 100, 100))
+        self.label.setPixmap(QPixmap(u"./Resources/Images/logo.svg"))
         self.label.setScaledContents(True)
         self.label_2 = QLabel(self.centralwidget)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(10, 140, 81, 21))
         self.button_CopyIP = QPushButton(self.centralwidget)
         self.button_CopyIP.setObjectName(u"button_CopyIP")
-        self.button_CopyIP.setGeometry(QRect(230, 130, 21, 21))
+        self.button_CopyIP.setGeometry(QRect(90, 130, 211, 41))
         self.button_CopyIP.setLayoutDirection(Qt.RightToLeft)
         self.button_CopyIP.setAutoFillBackground(False)
+        self.button_CopyIP.setStyleSheet(u"\n"
+"text-decoration: underline;")
         icon1 = QIcon()
-        icon1.addFile(u"../../Resources/Images/copy-icon2.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u"./Resources/Images/copy-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.button_CopyIP.setIcon(icon1)
         self.button_CopyIP.setCheckable(False)
         self.button_CopyIP.setFlat(True)
-        self.label_PublicIP = QLabel(self.centralwidget)
-        self.label_PublicIP.setObjectName(u"label_PublicIP")
-        self.label_PublicIP.setGeometry(QRect(100, 130, 131, 41))
         self.label_3 = QLabel(self.centralwidget)
         self.label_3.setObjectName(u"label_3")
-        self.label_3.setGeometry(QRect(10, 180, 161, 31))
-        self.radioButton = QRadioButton(self.centralwidget)
-        self.radioButton.setObjectName(u"radioButton")
-        self.radioButton.setEnabled(True)
-        self.radioButton.setGeometry(QRect(180, 190, 21, 21))
+        self.label_3.setGeometry(QRect(10, 180, 231, 31))
+        self.checkBox = QCheckBox(self.centralwidget)
+        self.checkBox.setObjectName(u"checkBox")
+        self.checkBox.setGeometry(QRect(230, 180, 21, 31))
+        self.checkBox.setLayoutDirection(Qt.RightToLeft)
+        self.checkBox.setTristate(False)
+        self.Button_MountMod_2 = QPushButton(self.centralwidget)
+        self.Button_MountMod_2.setObjectName(u"Button_MountMod_2")
+        self.Button_MountMod_2.setGeometry(QRect(720, 390, 71, 51))
+        font = QFont()
+        font.setPointSize(30)
+        font.setBold(True)
+        font.setItalic(False)
+        self.Button_MountMod_2.setFont(font)
+        self.Button_MountMod_2.setStyleSheet(u"color: rgb(19, 231, 69);\n"
+"border-color: rgb(19, 231, 69);\n"
+"font: 600 30pt \"Quicksand\";")
+        self.Button_MountMod_2.setIconSize(QSize(30, 30))
+        self.Button_MountMod_2.setFlat(True)
+        self.Button_MountMod_3 = QPushButton(self.centralwidget)
+        self.Button_MountMod_3.setObjectName(u"Button_MountMod_3")
+        self.Button_MountMod_3.setGeometry(QRect(630, 390, 71, 51))
+        self.Button_MountMod_3.setStyleSheet(u"color: rgb(19, 231, 69);\n"
+"border-color: rgb(19, 231, 69);")
+        icon2 = QIcon()
+        icon2.addFile(u"./Resources/Images/discord-icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.Button_MountMod_3.setIcon(icon2)
+        self.Button_MountMod_3.setIconSize(QSize(50, 50))
+        self.Button_MountMod_3.setFlat(True)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 795, 34))
+        self.menubar.setGeometry(QRect(0, 0, 795, 40))
         self.menuSettings_2 = QMenu(self.menubar)
         self.menuSettings_2.setObjectName(u"menuSettings_2")
         self.menuHelp = QMenu(self.menubar)
@@ -96,6 +122,10 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
+        self.Button_MountMod_2.setDefault(False)
+        self.Button_MountMod_3.setDefault(False)
+
+
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
@@ -114,16 +144,17 @@ class Ui_MainWindow(object):
         self.actionSettings.setStatusTip(QCoreApplication.translate("MainWindow", u"opens the settings menu", None))
 #endif // QT_CONFIG(statustip)
         self.actionAbout.setText(QCoreApplication.translate("MainWindow", u"About", None))
-        self.Button_MountMod.setText(QCoreApplication.translate("MainWindow", u"Mount mod", None))
+        self.Button_MountMod.setText(QCoreApplication.translate("MainWindow", u"Play", None))
         self.label.setText("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Public IP:", None))
 #if QT_CONFIG(tooltip)
         self.button_CopyIP.setToolTip("")
 #endif // QT_CONFIG(tooltip)
-        self.button_CopyIP.setText("")
-        self.label_PublicIP.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" text-decoration: underline;\">123.456.789.123</span></p></body></html>", None))
+        self.button_CopyIP.setText(QCoreApplication.translate("MainWindow", u"123.456.789.123", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-weight:600; color:#da2c38;\">Developer Mode:</span></p></body></html>", None))
-        self.radioButton.setText("")
+        self.checkBox.setText("")
+        self.Button_MountMod_2.setText(QCoreApplication.translate("MainWindow", u"?", None))
+        self.Button_MountMod_3.setText("")
         self.menuSettings_2.setTitle(QCoreApplication.translate("MainWindow", u"Options", None))
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
     # retranslateUi
