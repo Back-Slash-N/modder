@@ -23,7 +23,7 @@ color: rgb(104, 150, 137);
 background-color: rgb(11, 60, 73);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="Button_MountMod">
+   <widget class="QPushButton" name="Button_Play">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -70,7 +70,7 @@ font: 600 30pt &quot;Quicksand&quot;;</string>
      <rect>
       <x>10</x>
       <y>140</y>
-      <width>81</width>
+      <width>121</width>
       <height>21</height>
      </rect>
     </property>
@@ -78,14 +78,29 @@ font: 600 30pt &quot;Quicksand&quot;;</string>
      <string>Public IP:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_CopyIP">
+   <widget class="QPushButton" name="Button_CopyIP">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>120</x>
       <y>130</y>
       <width>211</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>true</underline>
+      <kerning>true</kerning>
+     </font>
     </property>
     <property name="toolTip">
      <string/>
@@ -127,7 +142,7 @@ text-decoration: underline;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#da2c38;&quot;&gt;Developer Mode:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="QCheckBox" name="Button_DeveloperMode">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -146,7 +161,7 @@ text-decoration: underline;</string>
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="Button_MountMod_2">
+   <widget class="QPushButton" name="Button_Guide">
     <property name="geometry">
      <rect>
       <x>720</x>
@@ -183,7 +198,7 @@ font: 600 30pt &quot;Quicksand&quot;;</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="Button_MountMod_3">
+   <widget class="QPushButton" name="Button_Discord">
     <property name="geometry">
      <rect>
       <x>630</x>

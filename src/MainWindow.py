@@ -7,8 +7,9 @@ import sys
 
 from Views.Ui_MainWindow import Ui_MainWindow
 import Scripts.GlobalVariables as GVars
-import Scripts.BasicLogger as Logger
+from Scripts.BasicLogger import Log
 import Scripts.RunGame as RG
+from requests import get
 #----------------------------------------------------------------
 
 
@@ -19,12 +20,10 @@ class MainUI(qtw.QMainWindow):
         self.ui.setupUi(self)
         # Binding click events
         self.ui.actionGuide.triggered.connect(lambda: self.OpenGuide())
-        self.ui.Button_MountMod.clicked.connect(lambda: self.MountMod())
-        
-        icon = qtg.QIcon()
-        icon.addFile("Resources.Images.MainWindowIcon.png",
-                     qtc.QSize(), qtg.QIcon.Normal, qtg.QIcon.Off)
-        self.setWindowIcon
+        self.ui.Button_Guide.clicked.connect(lambda: self.OpenGuide())
+        self.ui.Button_Play.clicked.connect(lambda: self.MountMod())
+        self.ui.Button_Discord.clicked.connect(lambda: self.DiscordInvite())
+        self.ui.button_CopyIP.clicked.connect(lambda: self.CopyIp())
         # this should be the custom toggle button but i didn't get it to work so i'm giving up for now 
         # self.toggle = qtw.QCheckBox()
         # self.ui.layout = qtw.QHBoxLayout(self)
@@ -33,9 +32,24 @@ class MainUI(qtw.QMainWindow):
     def OpenGuide(self):
         guideURL = "https://steamcommunity.com/sharedfiles/filedetails/?id=2458260280"
         webbrowser.open(guideURL)
+        Log("Opened the steam guide")
 
     def MountMod(self):
         RG.Mount()
+    
+    def DiscordInvite(self):
+        discordUrl = "https://discord.com/invite/kW3nG6GKpF"
+        webbrowser.open(discordUrl)
+        Log("Opened the discord invite")
+        
+    def GetIp(self):
+        ip = get('https://api.ipify.org').text
+        self.ui.button_CopyIP.setText(ip)
+        Log("Got the ip: " + ip)
+    
+    def CopyIp(self):
+        qtw.QApplication.clipboard().setText(self.ui.button_CopyIP.text())
+        Log("coppied the ip: " + self.ui.button_CopyIP.text())
     
 def OnStart():
 
@@ -44,18 +58,18 @@ def OnStart():
     x = GVars.AppStartDate
 
     # logging
-    Logger.Log("______________________LAUNCH LOG " + x + "______________________")
+    Log("______________________LAUNCH LOG " + x + "______________________")
     if (GVars.iow):
-        Logger.Log("")
-        Logger.Log("Windows OS detected!")
+        Log("")
+        Log("Windows OS detected!")
     else:
-        Logger.Log("")
-        Logger.Log("Linux OS detected!")
+        Log("")
+        Log("Linux OS detected!")
 
 if __name__ =='__main__':
     app = qtw.QApplication([])
-    
     window = MainUI()
-    window.show()
     OnStart()
+    window.GetIp()
+    window.show()
     sys.exit(app.exec())
