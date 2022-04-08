@@ -264,24 +264,15 @@ border-color: rgb(19, 231, 69);</string>
    <property name="text">
     <string>Guide</string>
    </property>
-   <property name="statusTip">
-    <string>opens the browser to show a guide on how to set up</string>
-   </property>
   </action>
   <action name="actionCheck_for_update">
    <property name="text">
     <string>Check for update</string>
    </property>
-   <property name="statusTip">
-    <string>checks for updates for the mod</string>
-   </property>
   </action>
   <action name="actionSettings">
    <property name="text">
     <string>Settings</string>
-   </property>
-   <property name="statusTip">
-    <string>opens the settings menu</string>
    </property>
   </action>
   <action name="actionAbout">
