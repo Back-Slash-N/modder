@@ -11,11 +11,11 @@ This repo contains only the launcher for the mod if you want the full mod please
 - and a lot of procrastination
 
 
-# How to build
+## How to build
 
-- This project can be built theoretically on any OS that supports python 3
+This project can be built theoretically on any OS that supports python 3
 
-**GUI launcher**
+**-GUI launcher**
 1. Clone the repo
 
 2. Create a virtual python environment (Not needed but preferred)
@@ -38,5 +38,5 @@ This repo contains only the launcher for the mod if you want the full mod please
 
 4. Run `src/MainWindow.py`
 
-**CLI launcher**
+**-CLI launcher**
 just run `src/cli.py`
