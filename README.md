@@ -3,9 +3,14 @@
 
 a GUI launcher for the portal 2: 32 players mod
 
-This repo contains only the launcher for the mod if you want the full mod please see [kyle's page](https://github.com/kyleraykbs/Portal2-32PlayerMod)
+This repo contains only the launcher for the mod if you want the full mod please visit [kyle's page](https://github.com/kyleraykbs/Portal2-32PlayerMod)
 
-# how to build
+## Built With
+- Python
+- PyQt5
+- and a lot of procrastination
+
+
 # How to build
 
 - This project can be built theoretically on any OS that supports python 3
