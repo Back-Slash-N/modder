@@ -39,4 +39,5 @@ This project can be built theoretically on any OS that supports python 3
 4. Run `src/MainWindow.py`
 
 **-CLI launcher**
+
 just run `src/cli.py`
